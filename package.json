@@ -6,6 +6,7 @@
   "description": "Roblox developer learning hub by Soft Production: Game Group",
   "engines": { "node": ">=20.0.0" },
   "scripts": {
+    "build": "node -e \"console.log('No build step required for this app.');\"",
     "start": "node --env-file-if-exists=.env server.mjs",
     "dev": "node --watch --env-file-if-exists=.env server.mjs",
     "test": "node --test"
