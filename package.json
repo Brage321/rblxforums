@@ -1,0 +1,13 @@
+{
+  "name": "pathtodev",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Roblox developer learning hub by Soft Production: Game Group",
+  "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "dev": "node --watch --env-file-if-exists=.env server.mjs",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soft Production: Game Group | Roblox Developer Hub</title>
+    <meta
+      name="description"
+      content="A Roblox creator forum for real discussions, build help, community posts, user profiles, and trusted creator badges."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">SP</div>
+          <div>
+            <div class="brand-name">Soft Production: Game Group</div>
+            <div class="brand-subtitle">Creator forum</div>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#community">Community</a>
+          <a href="#forum">Forum</a>
+          <a href="#people">People</a>
+          <a href="#account" class="nav-button">Sign up</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Roblox community forum</p>
+            <h1>Ask questions, share ideas, and grow as a developer.</h1>
+            <p class="hero-text">
+              This is a simple forum for Roblox creators to discuss builds, scripting, gameplay systems, publishing, and real troubleshooting with other developers.
+            </p>
+
+            <div class="search-box">
+              <input id="searchInput" type="search" placeholder="Search the forum..." />
+              <button id="searchButton">Search</button>
+            </div>
+
+            <div class="cta-row">
+              <button id="libraryButton" class="primary-button">Jump to discussions</button>
+              <a href="#account" class="secondary-link">Join the community</a>
+            </div>
+
+            <ul class="hero-metrics" aria-label="Site stats">
+              <li>
+                <strong id="articleMetric">0</strong>
+                <span>Members</span>
+              </li>
+              <li>
+                <strong id="memberMetric">0</strong>
+                <span>Creators</span>
+              </li>
+              <li>
+                <strong id="forumMetric">0</strong>
+                <span>Posts</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel-card highlight-card">
+              <div class="card-badge">Forum focus</div>
+              <h2>Community first</h2>
+              <p id="statusText">Talk, ask, share progress, and help other Roblox developers build better games.</p>
+              <div class="mini-stack">
+                <div>
+                  <span>1. Share</span>
+                  <strong>Build updates</strong>
+                </div>
+                <div>
+                  <span>2. Solve</span>
+                  <strong>Game problems</strong>
+                </div>
+                <div>
+                  <span>3. Grow</span>
+                  <strong>With the community</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="account" class="content-section account-layout">
+          <div class="panel-box">
+            <div class="panel-header">
+              <p class="eyebrow subtle">Create account</p>
+              <h3>Join the Soft Production creator network</h3>
+            </div>
+
+            <form id="signupForm" class="stack-form">
+              <label>
+                <span>Display name</span>
+                <input type="text" name="name" placeholder="Your creator name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" placeholder="••••••••" required />
+              </label>
+              <button type="submit" class="primary-button">Create account</button>
+            </form>
+
+            <form id="loginForm" class="stack-form secondary-form">
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="email@example.com" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" placeholder="••••••••" required />
+              </label>
+              <button type="submit" class="ghost-button">Log in</button>
+            </form>
+
+            <p id="authStatus" class="status-pill">Not signed in yet</p>
+          </div>
+
+          <div class="panel-box">
+            <div class="panel-header">
+              <p class="eyebrow subtle">People</p>
+              <h3>Creator directory</h3>
+            </div>
+
+            <div class="user-search">
+              <input id="userSearchInput" type="search" placeholder="Search creators..." />
+            </div>
+            <div id="userList" class="user-list"></div>
+          </div>
+        </section>
+
+        <section id="community" class="content-section profile-layout">
+          <div id="people" class="panel-box">
+            <div class="panel-header">
+              <p class="eyebrow subtle">Profile</p>
+              <h3 id="profileName">No creator selected</h3>
+            </div>
+            <div id="profileCard" class="profile-card empty-state">Choose a user to view their profile.</div>
+          </div>
+
+          <div id="forum" class="panel-box">
+            <div class="panel-header">
+              <p class="eyebrow subtle">Forum</p>
+              <h3>Ask, learn, share build ideas</h3>
+            </div>
+
+            <form id="postForm" class="stack-form">
+              <label>
+                <span>Post title</span>
+                <input type="text" name="title" placeholder="What are you trying to build?" required />
+              </label>
+              <label>
+                <span>Category</span>
+                <select name="category">
+                  <option value="studio">Roblox Studio</option>
+                  <option value="scripting">Luau & Scripting</option>
+                  <option value="building">Building & Design</option>
+                  <option value="gameplay">Game Systems</option>
+                  <option value="ui">UI & UX</option>
+                  <option value="shipping">Publish & Grow</option>
+                </select>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="body" rows="4" placeholder="Share your progress, challenge, or question..." required></textarea>
+              </label>
+              <button type="submit" class="primary-button">Create forum post</button>
+            </form>
+
+            <div id="forumPosts" class="forum-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
