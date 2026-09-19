@@ -3,9 +3,13 @@ services:
     name: rblxforums
     env: node
     plan: free
-    buildCommand: npm install
+    buildCommand: npm install && npm run build
     startCommand: npm start
     healthCheckPath: /api/overview
+    disk:
+      name: rblxforums-data
+      mountPath: /var/data
+      sizeGB: 1
     envVars:
       - key: NODE_ENV
         value: production
@@ -13,3 +17,5 @@ services:
         value: 0.0.0.0
       - key: PORT
         value: 10000
+      - key: DB_PATH
+        value: /var/data/pathtodev.sqlite
